@@ -1,0 +1,69 @@
+@import '../../adapt';
+.section-wedo{
+    padding: 100px 0;
+    background-color: #f5f4f4;
+    @include for_size(phone){
+        padding-top: 0 !important;
+    }
+    &_items{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        & .item{
+            position: relative;
+            box-shadow: 0 3px 10px rgba(#000000, .2);
+            border-radius: 10px;
+            width: 30%;
+            background-color: #fff;
+            overflow: hidden;
+            @include for_size(small-tablet){
+                flex: 1 0 auto;
+                width: 45%;
+                margin: 10px 10px 0;
+            }
+            @include for_size(phone){
+                width: 90%;
+                margin-bottom: 10px;
+            }
+            &_image{
+                overflow: hidden;
+                & img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 250px;
+                }
+            }
+            &_content{
+                padding: 30px;
+                &_title{
+                    display: block;
+                    color: #212529;
+                    font-weight: 500;
+                    margin-bottom: 12px;
+                    @include font-size(16, 25);
+                }
+                &_desc{
+                    color: #5a6169;
+                    margin-bottom: 25px;
+                    @include font-size(14, 16);
+                }
+                &_button{
+                    background-color: #007bff;
+                    color: white;
+                    padding: 12px 20px;
+                    border-radius: 6px;
+                    @include font-size (12, 14);
+                    transition: box-shadow .2s linear;
+                    &:hover{
+                        box-shadow: 0 3px 7px rgba(#007bff, .4);
+                    }
+                }
+            }
+            transition-property: transform;
+            transition-duration: .2s;
+            &:hover{
+                transform: scale(1.03) !important;
+            }
+        }
+    }
+}

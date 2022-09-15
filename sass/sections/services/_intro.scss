@@ -1,0 +1,35 @@
+.section-intro{
+    color: #273272;
+    @include for_size(small-tablet){
+        padding: 35px 0 0 !important;
+    }
+    & > .wrap{
+        @include for_size(small-tablet){
+            flex-direction: column;
+            padding: 0 10px;
+        }
+    }
+    &_title{
+        white-space: nowrap;
+        line-height: 60px;
+        padding-right: 20px;
+        margin-right: 20px;
+        border-right: 2px solid rgba(0, 0, 0, 0.2);
+        @include font-size(30, 50);
+        @include for_size(small-tablet){
+            border: none;
+        }
+        @include for_size(phone){
+            line-height: 40px;
+        }
+        & span{
+            display: block;
+            color: #f9641d;
+        }
+    }
+    &_desc{
+        font-size: 16px;
+        font-weight: 500;
+        align-self: center;
+    }
+}

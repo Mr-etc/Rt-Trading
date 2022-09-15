@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Generisch Sans';
+    src: local('Generisch Sans Book'), local('Generisch-Sans-Book'),
+        url('../fonts/GenerischSans-Book.woff2') format('woff2'),
+        url('../fonts/GenerischSans-Book.woff') format('woff'),
+        url('../fonts/GenerischSans-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Generisch Sans';
+    src: local('Generisch Sans Bold'), local('Generisch-Sans-Bold'),
+        url('../fonts/GenerischSans-Bold.woff2') format('woff2'),
+        url('../fonts/GenerischSans-Bold.woff') format('woff'),
+        url('../fonts/GenerischSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

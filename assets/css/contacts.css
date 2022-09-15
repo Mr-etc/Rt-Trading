@@ -1,0 +1,111 @@
+.section-feedback {
+  padding-top: 0;
+}
+
+@media (max-width: 570px) {
+  .section-feedback {
+    padding-top: 0 !important;
+  }
+}
+
+.section-feedback_header {
+  font-size: 33px;
+  line-height: 60px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 570px) {
+  .section-feedback_header {
+    margin-bottom: 25px;
+  }
+}
+
+.section-feedback_header h2 {
+  color: #f9641d;
+}
+
+@media (min-width: 770px) {
+  .section-feedback_header h2 {
+    font-size: calc(33px + 17 * (100vw / 1280)) !important;
+  }
+}
+
+@media (max-width: 770px) {
+  .section-feedback_header h2 {
+    font-size: calc(33px + 43.9 * ((100vw - 320px) / 1280)) !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-feedback_header h2 {
+    font-size: 50px;
+  }
+}
+
+.section-feedback_header h2 span {
+  color: #273272;
+}
+
+.section-feedback_form {
+  display: flex;
+}
+
+@media (max-width: 570px) {
+  .section-feedback_form {
+    flex-direction: column;
+  }
+}
+
+.section-feedback_form .form-wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 50%;
+}
+
+.section-feedback_form .form-wrap .form_item {
+  width: 90%;
+  height: 100%;
+  margin: 20px auto;
+}
+
+@media (max-width: 570px) {
+  .section-feedback_form .form-wrap .form_item {
+    margin: 10px auto;
+  }
+}
+
+.section-feedback_form .form-wrap .form_item-input {
+  width: 100%;
+  height: 100%;
+  transition: border-color .4s linear;
+}
+
+.section-feedback_form .form-wrap .form_item-input:focus {
+  border-color: #f9641d;
+}
+
+.section-feedback_form .form-wrap .form_item textarea {
+  resize: vertical;
+  min-height: 230px;
+}
+
+.section-feedback_button-send {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #f9641d;
+  color: white;
+  border: 1px solid #df5719;
+  cursor: pointer;
+  margin-top: 30px;
+  transition-property: color, background-color, border-color;
+  transition-duration: .2s;
+}
+
+.section-feedback_button-send:hover {
+  color: #f9641d;
+  background-color: #fff;
+  border-color: #f9641d;
+  box-shadow: 0 0 10px rgba(223, 87, 25, 0.3);
+}
+/*# sourceMappingURL=contacts.css.map */

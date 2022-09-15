@@ -1,0 +1,49 @@
+.section-services-list{
+    margin: -20px 0;
+    padding-top: 0;
+    @include for_size(phone){
+        padding-top: 40px !important;
+    }
+    & .item{
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(#000000, .2);
+        margin: 2.5% auto;
+        transition-property: transform, box-shadow;
+        transition-duration: .4s;
+        width: 95%;
+        &_title{
+            display: inline-block;
+            margin-bottom: 10px;
+            @include font-size(18, 24);
+            & a{
+                color: rgb(67, 17, 184);
+                transition: color .5s linear;
+                &::after{
+                    display: block;
+                    content: "";
+                    width: 0;
+                    height: 1px;
+                    background-color: red;
+                    border-radius: 5px;
+                    transition: width .2s linear;
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+        &_desc{
+            @include font-size(14, 16);
+            text-align: justify;
+            color: gray;
+        }
+        &:hover{
+            transform: scale(1.01);
+            box-shadow: 0 0 10px rgba(#000000, .5);
+        }
+    }
+}

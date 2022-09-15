@@ -1,0 +1,53 @@
+.section-about{
+    background-color: $wedo-bg;
+    & .wrap > *{
+        padding: 0 10px;
+    }
+    &_wrapper{
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+        @include for_size(small-tablet){
+            margin-top: 40px;
+        }
+        @include for_size(phone){
+            flex-direction: column;
+            margin-top: 40px;
+        }
+        &_image{
+            flex: 1 0 auto;
+            max-width: 50%;
+            @include for_size(phone){
+                max-width: none;
+            }
+            & img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        &_content{
+            width: 47%;
+            @include for_size(phone){
+                width: auto;
+            }
+            & .content_header{
+                font-weight: 700;
+                font-size: 36px;
+                margin-bottom: 30px;
+                @include font-size(30,36);
+                @include for_size(phone){
+                    margin-top: 25px;
+                }
+            }
+            & .content_link{
+                display: block;
+                font-size: 18px;
+                color: #e91e63;
+                margin-top: 10px;
+                &:hover{
+                    color: #ff71a1;
+                }
+            }
+        }
+    }
+}

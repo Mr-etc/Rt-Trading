@@ -1,0 +1,6 @@
+<IfModule dir_module>
+    Order Deny,Allow
+    <FilesMatch "\.(htaccess|htpasswd|ini|php|phps|fla|psd|log|sh)$">
+    Deny from all
+    </FilesMatch>
+</IfModule>

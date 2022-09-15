@@ -1,0 +1,72 @@
+.section-feedback{
+    padding-top: 0;
+    @include for_size(phone){
+        padding-top: 0 !important;
+    }
+    &_header{
+        font-size: 33px;
+        line-height: 60px;
+        margin-bottom: 50px;
+        @include for_size(phone){
+            margin-bottom: 25px;
+        }
+        & h2{
+            @include font-size(33, 50, 'true');
+            color: #f9641d;
+            & span{
+                color: #273272;
+            }
+        }
+    }
+    &_form{
+        display: flex;
+        @include for_size(phone){
+            flex-direction: column;
+        }
+        & .form-wrap{
+            display: flex;
+            flex-direction: column;
+            flex: 1 0 50%;
+            & .form_item{
+                width: 90%;
+                height: 100%;
+                margin: 20px auto;
+                @include for_size(phone){
+                    margin: 10px auto;
+                }
+                &-input{
+                    width: 100%;
+                    height: 100%;
+                    transition: border-color .4s linear;
+                    &:focus{
+                        border-color: #f9641d;
+                    }
+                }
+                & textarea{
+                    resize: vertical;
+                    min-height: 230px;
+                }
+            }
+        }
+    }
+    &_button{
+        &-send{
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #f9641d;
+            color: white;
+            border: 1px solid #df5719;
+            cursor: pointer;
+            margin-top: 30px;
+            transition-property: color, background-color, border-color;
+            transition-duration: .2s;
+            &:hover{
+                color: #f9641d;
+                background-color: #fff;
+                border-color: #f9641d;
+                box-shadow: 0 0 10px rgba(#df5719, .3);
+            }
+        }
+    }
+}

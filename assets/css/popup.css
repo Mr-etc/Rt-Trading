@@ -1,0 +1,50 @@
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+}
+
+@media (max-width: 570px) {
+  .popup {
+    top: 66.5px;
+    right: 15px;
+    left: 15px;
+    bottom: auto;
+  }
+}
+
+.popup_body {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  margin-top: 10px;
+  background-color: #fff;
+  border: 1px solid silver;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.popup_body-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eceeef;
+}
+
+.popup_body-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.popup_body-message {
+  flex: 1 1 auto;
+  position: relative;
+  padding: 10px 15px;
+}
+/*# sourceMappingURL=popup.css.map */

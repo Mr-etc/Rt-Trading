@@ -1,0 +1,79 @@
+.section-details{
+    @include for_size(min-laptop){
+        padding-top: 0 !important;
+    }
+    & .wrap{
+        @include for_size(min-laptop){
+            flex-direction: column;
+            padding: 10px;
+        }
+        // & > *{
+        //     flex: 1 0 50%;
+        // }
+        
+    } 
+    &_information-block{
+        padding: 0 30px;
+        & .block_header_title{
+            color: #3C4858;
+            text-align: left;
+            &::after{
+                position: static;
+                width: 100%;
+                transform: none;
+            }
+        }
+        & .details-items{
+            & .item{
+                display: flex;
+                padding: 20px 0;
+                border-bottom: 1px dotted silver;
+                &::before{
+                    padding-top: 6px;
+                }
+                > a.item-value{
+                    &::after{
+                        display: block;
+                        content: "";
+                        width: 0;
+                        height: .1vh;
+                        background-color: #f9641d;
+                        margin: 0 auto;
+                        transition: width .4s linear;
+                    }
+                    &:hover{
+                        color: #f9641d;
+                    }
+                    &:hover::after{
+                        width: 100%;
+                    }
+                }
+                &-value{
+                    @include font-size(12, 16);
+                    letter-spacing: .02em;
+                    line-height: 1.8;
+                    color: #777777;
+                    padding-left: 10px;
+                    transition: color .4s linear;
+                }
+            }
+        }
+    }
+    &_map-block{
+        flex: 1 0 70%;
+        & .map{
+            width: 100%;
+            height: 100%;
+            border: none;
+            box-shadow: 0 0 10px rgba( #000000, .25);
+            border-radius: 10px;
+            @include for_size(min-laptop){
+                margin-top: 20px;
+                min-height: 500px;
+            }
+            @include for_size(phone){
+                min-height: 350px;
+            }
+        }
+    }
+}

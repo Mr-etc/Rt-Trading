@@ -1,0 +1,44 @@
+.section-information{
+    &_image{
+        max-width: 100%;
+        height: auto;
+    }
+    &_description{
+        margin-top: 90px;
+        color: gray;
+        line-height: 1.8;
+        @include font-size(14, 16);
+        @include for_size(small-tablet){
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+    }
+    &_advantages{
+        margin-top: 20px;
+        & .advantages{
+            &-title{
+                font-size: 24px;
+                color: #f9641d;
+            }
+            &-list{
+                margin-left: 20px;
+                & li{
+                    position: relative;
+                    margin-left: 15px;
+                    margin-top: 10px;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        display: block;
+                        background-color: #f9641d;
+                        border-radius: 50%;
+                        width: 10px;
+                        height: 10px;
+                        left: -15px;
+                        top: 10px
+                    }
+                }
+            }
+        }
+    }
+}
